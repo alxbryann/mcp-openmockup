@@ -1,0 +1,27 @@
+{
+  "name": "mcp-openmockup",
+  "version": "0.1.0",
+  "description": "MCP server for OpenMockup — generate 3D device mockup images with AI",
+  "keywords": ["mcp", "mockup", "device", "3d", "screenshot", "phone", "mac"],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-openmockup": "./dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@supabase/supabase-js": "^2.0.0",
+    "playwright-chromium": "^1.50.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
