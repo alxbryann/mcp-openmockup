@@ -2,13 +2,32 @@
   "name": "mcp-openmockup",
   "version": "0.1.0",
   "description": "MCP server for OpenMockup — generate 3D device mockup images with AI",
-  "keywords": ["mcp", "mockup", "device", "3d", "screenshot", "phone", "mac"],
+  "keywords": [
+    "mcp",
+    "mockup",
+    "device",
+    "3d",
+    "screenshot",
+    "phone",
+    "mac",
+    "openmockup",
+    "iphone",
+    "macbook"
+  ],
+  "homepage": "https://openmockup.dev",
   "license": "MIT",
   "type": "module",
-  "bin": {
-    "mcp-openmockup": "./dist/index.js"
+  "engines": {
+    "node": ">=18"
   },
-  "files": ["dist"],
+  "bin": {
+    "mcp-openmockup": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
