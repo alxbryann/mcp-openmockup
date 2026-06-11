@@ -11,6 +11,7 @@ export type RenderOpts = {
   camera_offset_x?: number
   camera_offset_y?: number
   camera_roll?: number
+  camera_preset?: 'front' | 'hero' | 'dramatic' | 'topdown'
   transparent?: boolean
   width?: number
   height?: number
@@ -31,6 +32,7 @@ export type MultiRenderOpts = {
   bg_color?: string
   zoom?: number
   camera_roll?: number
+  camera_preset?: 'front' | 'hero' | 'dramatic' | 'topdown'
   transparent?: boolean
   width?: number
   height?: number
@@ -74,6 +76,7 @@ export async function renderMockup(opts: RenderOpts) {
     camera_offset_x: opts.camera_offset_x,
     camera_offset_y: opts.camera_offset_y,
     camera_roll: opts.camera_roll,
+    camera_preset: opts.camera_preset,
     transparent: opts.transparent,
     width: opts.width ?? 1440,
     height: opts.height ?? 2880,
@@ -108,6 +111,7 @@ export async function renderMockupMulti(opts: MultiRenderOpts) {
     bgColor: opts.bg_color,
     zoom: opts.zoom,
     camera_roll: opts.camera_roll,
+    camera_preset: opts.camera_preset,
     transparent: opts.transparent,
     width: opts.width ?? 2880,
     height: opts.height ?? 2880,

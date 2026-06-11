@@ -67,6 +67,12 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             type: 'number',
             description: 'Camera roll in radians. 0 = upright, 1.5708 ≈ 90°.',
           },
+          camera_preset: {
+            type: 'string',
+            enum: ['front', 'hero', 'dramatic', 'topdown'],
+            description:
+              'Built-in camera view. front = straight-on; hero = slight tilt; dramatic = strong angle with roll; topdown = high lean. Easier than manual zoom/offsets.',
+          },
           transparent: {
             type: 'boolean',
             description: 'Render with transparent background (alpha PNG). Ignores bg_color.',
@@ -140,6 +146,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
           camera_roll: {
             type: 'number',
             description: 'Camera roll in radians',
+          },
+          camera_preset: {
+            type: 'string',
+            enum: ['front', 'hero', 'dramatic', 'topdown'],
+            description: 'Built-in camera view (front, hero, dramatic, topdown)',
           },
           transparent: {
             type: 'boolean',
